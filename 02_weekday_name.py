@@ -12,6 +12,7 @@ def weekday_name(day_of_week):
         >>> weekday_name(9)
         >>> weekday_name(0)
     """
+    # turn global var
     weekdays = {
         1: "Sunday",
         2: "Monday",
@@ -23,5 +24,4 @@ def weekday_name(day_of_week):
     }
     if (1 <= day_of_week <= 7):
         return weekdays[day_of_week]
-    else:
-        return None
+    return None

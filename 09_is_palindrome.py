@@ -25,6 +25,6 @@ def is_palindrome(phrase):
     reverse_phrase = phrase[::-1]
 
     if reverse_phrase == phrase:
-        return True
+        return True  # can return output of expression
     else:
         return False

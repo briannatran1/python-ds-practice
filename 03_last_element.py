@@ -12,6 +12,7 @@ def last_element(lst):
         >>> nums == [1, 2, 3]
         True
     """
+    # guards, if lst exists
     if (len(lst) == 0):
         return None
     else:
