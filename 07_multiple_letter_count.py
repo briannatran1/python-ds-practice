@@ -10,10 +10,15 @@ def multiple_letter_count(phrase):
 
     count = {}
 
+    # for letter in phrase:
+    #     if count.get(letter):  # check alt syntax
+    #         count[letter] += 1
+    #     else:
+    #         count[letter] = 1
+
+    # return count
+
     for letter in phrase:
-        if count.get(letter):  # check alt syntax
-            count[letter] += 1
-        else:
-            count[letter] = 1
+        count[letter] = count.get(letter, 0) + 1
 
     return count

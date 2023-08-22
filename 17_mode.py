@@ -13,13 +13,25 @@ def mode(nums):
     """
     # make freq counter and get max value
 
-    highest_count = 0
-    highest_val = 0
+    # our solution
+    #
+    # highest_count = 0
+    # highest_val = 0
+
+    # for num in nums:
+    #     count = nums.count(num)
+    #     if count > highest_count:
+    #         highest_count = count
+    #         highest_val = num
+
+    # return highest_val
+    counts = {}
 
     for num in nums:
-        count = nums.count(num)
-        if count > highest_count:
-            highest_count = count
-            highest_val = num
+        counts[num] = counts.get(num, 0) + 1
 
-    return highest_val
+    max_value = max(counts.values())
+
+    for (num, freq) in counts.items():
+        if freq == max_value:
+            return num

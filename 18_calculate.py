@@ -30,24 +30,39 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
     """
     # make result var
 
+    # if operation == "add":
+    #     if not make_int:
+    #         return (f"{message} {a + b}")
+    #     return (f"{message} {int(a + b)}")
+
+    # elif operation == "subtract":
+    #     if not make_int:
+    #         return (f"{message} {a - b}")
+    #     return (f"{message} {int(a - b)}")
+
+    # elif operation == "multiply":
+    #     if not make_int:
+    #         return (f"{message} {a * b}")
+    #     return (f"{message} {int(a * b)}")
+
+    # elif operation == "divide":
+    #     if not make_int:
+    #         return (f"{message} {a / b}")
+    #     return (f"{message} {(a // b)}")
+
+    # raise ValueError("Invalid Operation")
     if operation == "add":
-        if not make_int:
-            return (f"{message} {a + b}")
-        return (f"{message} {int(a + b)}")
-
+        res = a + b
     elif operation == "subtract":
-        if not make_int:
-            return (f"{message} {a - b}")
-        return (f"{message} {int(a - b)}")
-
+        res = a - b
     elif operation == "multiply":
-        if not make_int:
-            return (f"{message} {a * b}")
-        return (f"{message} {int(a * b)}")
-
+        res = a * b
     elif operation == "divide":
-        if not make_int:
-            return (f"{message} {a / b}")
-        return (f"{message} {(a // b)}")
+        res = a / b
+    else:
+        raise ValueError("Invalid Operation")
 
-    raise ValueError("Invalid Operation")
+    if make_int:
+        res = int(res)
+
+    return f"{message} {res}"

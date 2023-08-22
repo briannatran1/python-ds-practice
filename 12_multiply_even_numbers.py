@@ -14,7 +14,10 @@ def multiply_even_numbers(nums):
     """
     # get rid of comprehension
     product = 1
-    evens = [num for num in nums if num % 2 == 0]
-    for even in evens:
-        product = product * even
+
+    # evens = [num for num in nums if num % 2 == 0]
+    for num in nums:
+        if num % 2 == 0:
+            product *= num
+
     return product
