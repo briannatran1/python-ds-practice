@@ -12,6 +12,7 @@ def flip_case(phrase, to_swap):
 
     """
     string = ""
+
     for char in phrase:
         if char == to_swap.upper() or char == to_swap.lower():
             string += char.swapcase()
@@ -19,4 +20,3 @@ def flip_case(phrase, to_swap):
             string += char
 
     return string
-

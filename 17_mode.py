@@ -11,6 +11,7 @@ def mode(nums):
         >>> mode([2, 2, 3, 3, 2])
         2
     """
+    # make freq counter and get max value
 
     highest_count = 0
     highest_val = 0

@@ -28,6 +28,8 @@ def calculate(operation, a, b, make_int=False, message='The result is'):
           ...
         ValueError: Invalid Operation
     """
+    # make result var
+
     if operation == "add":
         if not make_int:
             return (f"{message} {a + b}")
